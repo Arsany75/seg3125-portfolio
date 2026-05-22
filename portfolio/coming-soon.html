@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming soon — Arsany Dematry · SEG3125</title>
+  <meta name="description" content="This case study is on the way. A design by Arsany Dematry for SEG3125 at the University of Ottawa." />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <style>
+    /* Hold-page specific layout (reuses the shared tokens) */
+    .hold-wrap { min-height: 100vh; display: flex; flex-direction: column; }
+    .hold-bar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(246,247,249,.85);
+      backdrop-filter: blur(10px);
+    }
+    .hold-bar .container { display: flex; align-items: center; justify-content: space-between; padding-block: 0.7rem; }
+    .hold-main { flex: 1; display: grid; place-items: center; position: relative; overflow: hidden; }
+    .hold-main .hero-bg { position: absolute; inset: 0; }
+    .hold-card {
+      position: relative; z-index: 1;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      max-width: 560px; width: calc(100% - 2rem);
+      margin: 3rem auto; padding: 2.6rem;
+      text-align: center;
+    }
+    .hold-icon { width: 76px; height: 76px; border-radius: 18px; display: grid; place-items: center; margin: 0 auto 1.2rem; color: #fff; font-size: 2rem; }
+    .hold-no { font-family: var(--font-mono); color: var(--accent-ink); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hold-title { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: 0.4rem 0 0.8rem; }
+    .hold-status {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--ink-2); background: var(--accent-50); border: 1px solid var(--line);
+      padding: 0.35rem 0.8rem; border-radius: 999px; margin-bottom: 1.2rem;
+    }
+    .hold-desc { color: var(--muted); margin-bottom: 1.8rem; }
+    .progress-line { height: 6px; background: var(--surface-2); border-radius: 999px; overflow: hidden; margin: 0 auto 1.8rem; max-width: 320px; }
+    .progress-line span { display: block; height: 100%; width: 22%; background: var(--accent); border-radius: 999px; }
+  </style>
+</head>
+
+<body>
+  <div class="hold-wrap">
+    <!-- top bar -->
+    <header class="hold-bar">
+      <div class="container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">AD</span>
+          <span class="brand-name">Arsany Dematry</span>
+        </a>
+        <a class="btn btn-ghost btn-sm" href="index.html">
+          <i class="bi bi-arrow-left" aria-hidden="true"></i> Back to portfolio
+        </a>
+      </div>
+    </header>
+
+    <!-- hold card -->
+    <main class="hold-main">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <section class="hold-card">
+        <div class="hold-icon" id="holdIcon" style="background: linear-gradient(135deg, #0a6e96, #0d4f6e);">
+          <i class="bi bi-hourglass-split" id="holdIconGlyph" aria-hidden="true"></i>
+        </div>
+        <p class="hold-no"><span id="holdNo">00</span> — case study</p>
+        <h1 class="hold-title" id="holdTitle">Coming soon</h1>
+        <p class="hold-status"><i class="bi bi-cone-striped" aria-hidden="true"></i> In progress this semester</p>
+        <div class="progress-line" aria-hidden="true"><span></span></div>
+        <p class="hold-desc" id="holdDesc">
+          I&rsquo;ll design and build this project as part of SEG3125. Check back soon — or
+          head back to the portfolio to see what else I&rsquo;m working on.
+        </p>
+        <a class="btn btn-accent" href="index.html#work">
+          <i class="bi bi-grid" aria-hidden="true"></i> See all projects
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span class="footer-brand">Arsany Dematry</span>
+        <span class="footer-meta mono">SEG3125 · University of Ottawa · <span id="year"></span></span>
+        <span class="footer-built">Built with HTML, CSS, JavaScript &amp; Bootstrap&nbsp;5</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* Adapt this single hold page to whichever design was clicked. */
+    (function () {
+      var DESIGNS = {
+        service:   { no: "01", title: "Service Booking Site", icon: "bi-wrench-adjustable-circle", tint: "linear-gradient(135deg,#0a6e96,#0d4f6e)",
+          desc: "A site for a local service (think dentist, bike repair or hairdresser) where booking feels effortless." },
+        memory:    { no: "02", title: "Memory Game", icon: "bi-grid-3x3-gap", tint: "linear-gradient(135deg,#11607e,#0a3a52)",
+          desc: "A playful, interactive matching game built right in the browser with clear feedback and state." },
+        ecommerce: { no: "03", title: "E-Commerce Store", icon: "bi-bag-check", tint: "linear-gradient(135deg,#15324d,#0c2438)",
+          desc: "A storefront focused on a calm, trustworthy path from browsing all the way to checkout." },
+        analytics: { no: "04", title: "Analytics Dashboard", icon: "bi-bar-chart-line", tint: "linear-gradient(135deg,#0b7d7d,#0a4f63)",
+          desc: "A data-visualisation interface that turns numbers into a story anyone can read at a glance." }
+      };
+
+      var params = new URLSearchParams(window.location.search);
+      var key = params.get("design");
+      var d = DESIGNS[key];
+
+      if (d) {
+        document.getElementById("holdNo").textContent = d.no;
+        document.getElementById("holdTitle").textContent = d.title;
+        document.getElementById("holdDesc").textContent = d.desc;
+        document.getElementById("holdIcon").style.background = d.tint;
+        var glyph = document.getElementById("holdIconGlyph");
+        glyph.className = "bi " + d.icon;
+        document.title = d.title + " — coming soon · Arsany Dematry";
+      }
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
