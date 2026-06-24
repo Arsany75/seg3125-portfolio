@@ -1,375 +1,845 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arsany Dematry — UI/UX Portfolio · SEG3125</title>
-  <meta name="description"
-    content="Portfolio entry page for Arsany Dematry, a Computer Engineering student exploring clear, human-centred user interface design in SEG3125 at the University of Ottawa." />
 
-  <!-- Bootstrap 5 (CSS) -->
+  <title>Arsany Dematry — UI/UX Portfolio · SEG3125</title>
+
+<meta
+ name="description"
+ content="Portfolio for Arsany Dematry, a Computer Engineering student exploring clear, human-centred user-interface design in SEG3125 at the University of Ottawa."
+/>
+
+  <!-- Bootstrap 5 -->
+
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-    rel="stylesheet" />
-  <!-- Bootstrap Icons (the coherent, standard icon set shown in the Iconography lecture) -->
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet" />
-  <!-- Typography: Bricolage Grotesque (display) · IBM Plex Sans (body) · IBM Plex Mono (labels) -->
+    rel="stylesheet"
+  />
+
+  <!-- Typography:
+       Bricolage Grotesque = display headings
+       IBM Plex Sans = body and interface text
+       IBM Plex Mono = labels and metadata
+  -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet"
+  />
 
   <!-- Custom design layer -->
+
   <link href="css/style.css" rel="stylesheet" />
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120" tabindex="0">
+<body
+  data-bs-spy="scroll"
+  data-bs-target="#mainNav"
+  data-bs-offset="120"
+  tabindex="0"
+>
 
-  <!-- =====================  NAVBAR  ===================== -->
+  <!-- ===================== NAVBAR ===================== -->
+
   <nav id="mainNav" class="navbar navbar-expand-lg sticky-top site-nav">
     <div class="container">
-      <a class="navbar-brand brand" href="#top">
-        <span class="brand-mark">AD</span>
-        <span class="brand-name">Arsany Dematry</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navLinks" aria-controls="navLinks"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <i class="bi bi-list" aria-hidden="true"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navLinks">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#process">How&nbsp;I&nbsp;work</a></li>
-          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-            <a class="btn btn-accent btn-sm" href="#work">
-              See my projects <i class="bi bi-arrow-down-right" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+
+```
+  <a class="navbar-brand brand" href="#top">
+    <span class="brand-mark">AD</span>
+    <span class="brand-name">Arsany Dematry</span>
+  </a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navLinks"
+    aria-controls="navLinks"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <i class="bi bi-list" aria-hidden="true"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navLinks">
+    <ul class="navbar-nav ms-auto align-items-lg-center">
+
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#process">How&nbsp;I&nbsp;work</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#work">Work</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+
+      <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+        <a class="btn btn-accent btn-sm" href="#work">
+          See my projects
+          <i class="bi bi-arrow-down-right" aria-hidden="true"></i>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+</div>
+```
+
   </nav>
 
-  <!-- =====================  HERO  ===================== -->
+  <!-- ===================== HERO ===================== -->
+
   <header id="top" class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <div class="row align-items-center g-5">
-        <!-- Hero text -->
-        <div class="col-lg-7 hero-text">
-          <p class="kicker reveal">// SEG3125 · Analysis &amp; Design of User Interfaces</p>
-          <h1 class="display-name reveal" data-reveal-delay="1">
-            Arsany Dematry
-          </h1>
-          <p class="lead-role reveal" data-reveal-delay="2">
-            Computer&nbsp;Engineering student building
-            <span class="hl">clear, human-centred</span> digital interfaces.
-          </p>
-          <p class="lead-sub reveal" data-reveal-delay="3">
-            I care about the intersection of engineering, AI, and visual design: technical systems should feel simple, trustworthy, and fast to understand. This portfolio will collect the interfaces I build in SEG3125 this semester.
-          </p>
-          <div class="hero-actions reveal" data-reveal-delay="4">
-            <a class="btn btn-accent" href="#work">
-              View my work <i class="bi bi-arrow-down-right" aria-hidden="true"></i>
-            </a>
-            <a class="btn btn-ghost" href="#about">
-              More about me
-            </a>
-          </div>
-          <ul class="hero-meta reveal" data-reveal-delay="5">
-            <li><i class="bi bi-geo-alt" aria-hidden="true"></i> Ottawa, Canada</li>
-            <li><i class="bi bi-mortarboard" aria-hidden="true"></i> University of Ottawa</li>
-            <li><i class="bi bi-circle-fill status-dot" aria-hidden="true"></i> Currently learning UI/UX</li>
-          </ul>
+
+```
+<div class="hero-bg" aria-hidden="true"></div>
+
+<div class="container hero-inner">
+  <div class="row align-items-center g-5">
+
+    <!-- Hero text -->
+    <div class="col-lg-7 hero-text">
+
+      <p class="kicker reveal">
+        // SEG3125 · Analysis &amp; Design of User Interfaces
+      </p>
+
+      <h1 class="display-name reveal" data-reveal-delay="1">
+        Arsany Dematry
+      </h1>
+
+      <p class="lead-role reveal" data-reveal-delay="2">
+        Computer&nbsp;Engineering student building
+        <span class="hl">clear, human-centred</span>
+        digital interfaces.
+      </p>
+
+      <p class="lead-sub reveal" data-reveal-delay="3">
+        I care about the intersection of engineering, AI, and visual
+        design. Technical systems should feel simple, trustworthy, and
+        fast to understand. This portfolio collects the interfaces I build
+        throughout SEG3125.
+      </p>
+
+      <div class="hero-actions reveal" data-reveal-delay="4">
+
+        <a class="btn btn-accent" href="#work">
+          View my work
+          <i class="bi bi-arrow-down-right" aria-hidden="true"></i>
+        </a>
+
+        <a class="btn btn-ghost" href="#about">
+          More about me
+        </a>
+
+      </div>
+
+      <ul class="hero-meta reveal" data-reveal-delay="5">
+
+        <li>
+          <i class="bi bi-geo-alt" aria-hidden="true"></i>
+          Ottawa, Canada
+        </li>
+
+        <li>
+          <i class="bi bi-mortarboard" aria-hidden="true"></i>
+          University of Ottawa
+        </li>
+
+        <li>
+          <i
+            class="bi bi-circle-fill status-dot"
+            aria-hidden="true"
+          ></i>
+          Currently learning UI/UX
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- Hero portrait card -->
+    <div class="col-lg-5">
+
+      <figure class="portrait reveal" data-reveal-delay="3">
+
+        <span class="tick tick-tl" aria-hidden="true"></span>
+        <span class="tick tick-br" aria-hidden="true"></span>
+
+        <div
+          class="portrait-fill"
+          role="img"
+          aria-label="Monogram portrait card for Arsany Dematry"
+        >
+          <span class="portrait-monogram">AD</span>
+          <span class="portrait-hint">
+            Computer Engineering · UI/UX
+          </span>
         </div>
 
-        <!-- Hero portrait placeholder -->
-        <div class="col-lg-5">
-          <figure class="portrait reveal" data-reveal-delay="3">
-            <span class="tick tick-tl" aria-hidden="true"></span>
-            <span class="tick tick-br" aria-hidden="true"></span>
-            <div class="portrait-fill" role="img" aria-label="Monogram portrait card for Arsany Dematry">
-              <span class="portrait-monogram">AD</span>
-              <span class="portrait-hint">Computer Engineering · UI/UX</span>
-            </div>
-            <figcaption class="portrait-cap">
-              <span class="mono">portfolio.v1</span>
-              <span>First iteration — built for SEG3125</span>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
+        <figcaption class="portrait-cap">
+          <span class="mono">portfolio.v1</span>
+          <span>Built and expanded throughout SEG3125</span>
+        </figcaption>
+
+      </figure>
+
     </div>
+
+  </div>
+</div>
+```
+
   </header>
 
   <main>
-    <!-- =====================  ABOUT  ===================== -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-no mono">01</span>
-          <h2 class="section-title">About me</h2>
-        </div>
 
-        <div class="row g-5 align-items-start">
-          <div class="col-lg-7">
-            <p class="prose reveal">
-              Hi — I&rsquo;m <strong>Arsany Dematry</strong>, a Computer Engineering student at the University of Ottawa. I like taking technical ideas and making them feel clear: that&rsquo;s true whether I&rsquo;m coding a feature, sketching a screen, or explaining an idea to a teammate.
-            </p>
-            <p class="prose reveal">
-              I&rsquo;m interested in AI, software systems, entrepreneurship, and visual presentation. For me, strong interface design is not decoration; it is communication. A good screen should help users know where they are, what matters most, and what action to take next.
-            </p>
-            <ul class="chips reveal" aria-label="A few things I like">
-              <li class="chip"><i class="bi bi-code-slash" aria-hidden="true"></i> Clean code</li>
-              <li class="chip"><i class="bi bi-cpu" aria-hidden="true"></i> AI &amp; systems</li>
-              <li class="chip"><i class="bi bi-pencil" aria-hidden="true"></i> Visual design</li>
-              <li class="chip"><i class="bi bi-lightning-charge" aria-hidden="true"></i> Entrepreneurship</li>
-              <li class="chip"><i class="bi bi-stars" aria-hidden="true"></i> Style &amp; presentation</li>
-            </ul>
-          </div>
+```
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section">
+  <div class="container">
 
-          <div class="col-lg-5">
-            <aside class="fact-card reveal">
-              <h3 class="fact-title">At a glance</h3>
-              <dl class="fact-list">
-                <div>
-                  <dt><i class="bi bi-mortarboard" aria-hidden="true"></i> Studying</dt>
-                  <dd>B.A.Sc. Computer Engineering</dd>
-                </div>
-                <div>
-                  <dt><i class="bi bi-compass" aria-hidden="true"></i> Focus right now</dt>
-                  <dd>UI/UX &amp; visual communication</dd>
-                </div>
-                <div>
-                  <dt><i class="bi bi-tools" aria-hidden="true"></i> Working with</dt>
-                  <dd>HTML · CSS · JavaScript · Bootstrap</dd>
-                </div>
-                <div>
-                  <dt><i class="bi bi-envelope" aria-hidden="true"></i> Reach me</dt>
-                  <dd><a href="mailto:arsanydematry1@gmail.com">arsanydematry1@gmail.com</a></dd>
-                </div>
-              </dl>
-            </aside>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="section-head reveal">
+      <span class="section-no mono">01</span>
+      <h2 class="section-title">About me</h2>
+    </div>
 
-    <!-- =====================  HOW I WORK  ===================== -->
-    <section id="process" class="section section-alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-no mono">02</span>
-          <h2 class="section-title">How I work</h2>
-        </div>
+    <div class="row g-5 align-items-start">
 
-        <p class="prose prose-lead reveal">
-          I&rsquo;m early in my design journey. Right now I&rsquo;m taking
-          <strong>SEG3125 — Analysis and Design of User Interfaces</strong>, where I&rsquo;m
-          learning the principles behind interfaces that communicate clearly. My approach is
-          simple: learn a principle, apply it deliberately, then look back and ask whether it
-          actually made the experience easier.
+      <div class="col-lg-7">
+
+        <p class="prose reveal">
+          Hi — I&rsquo;m <strong>Arsany Dematry</strong>, a Computer
+          Engineering student at the University of Ottawa. I like taking
+          technical ideas and making them feel clear. That is true whether
+          I am coding a feature, sketching a screen, or explaining an idea
+          to a teammate.
         </p>
 
-        <div class="row g-4 mt-1">
-          <div class="col-md-6 col-lg-3">
-            <div class="step-card reveal">
-              <span class="step-no mono">→</span>
-              <i class="bi bi-search step-icon" aria-hidden="true"></i>
-              <h3 class="step-title">Learn</h3>
-              <p>Study the principle — scale, hierarchy, balance, contrast, colour, type — from trusted sources.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="step-card reveal" data-reveal-delay="1">
-              <span class="step-no mono">→</span>
-              <i class="bi bi-pencil-square step-icon" aria-hidden="true"></i>
-              <h3 class="step-title">Apply</h3>
-              <p>Make deliberate choices and write down <em>why</em>, so design isn&rsquo;t accidental.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="step-card reveal" data-reveal-delay="2">
-              <span class="step-no mono">→</span>
-              <i class="bi bi-code-square step-icon" aria-hidden="true"></i>
-              <h3 class="step-title">Build</h3>
-              <p>Turn the design into a working interface with HTML, CSS, JavaScript and Bootstrap.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="step-card reveal" data-reveal-delay="3">
-              <span class="step-no mono">→</span>
-              <i class="bi bi-arrow-repeat step-icon" aria-hidden="true"></i>
-              <h3 class="step-title">Reflect</h3>
-              <p>Test it against the principles and feedback, then refine. Nothing here is final.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="learn-row reveal">
-          <h3 class="learn-title"><i class="bi bi-bookmark-star" aria-hidden="true"></i> What I&rsquo;m learning from</h3>
-          <ul class="learn-links">
-            <li>
-              <a href="https://www.nngroup.com/" target="_blank" rel="noopener">
-                Nielsen Norman Group <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-              </a>
-              <span>UX research &amp; visual-design principles</span>
-            </li>
-            <li>
-              <a href="https://www.w3schools.com/bootstrap5/index.php" target="_blank" rel="noopener">
-                Bootstrap 5 &amp; W3Schools <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-              </a>
-              <span>HTML, CSS, JavaScript &amp; UI components</span>
-            </li>
-            <li>
-              <a href="https://catalogue.uottawa.ca/en/courses/seg/" target="_blank" rel="noopener">
-                SEG3125 @ uOttawa <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-              </a>
-              <span>Analysis &amp; Design of User Interfaces</span>
-            </li>
-          </ul>
-          <p class="learn-note mono">
-            // continuing this semester: user-centred design, prototyping,
-            human cognition, memory, attention &amp; interactive systems.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================  WORK / CASE STUDIES  ===================== -->
-    <section id="work" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-no mono">03</span>
-          <h2 class="section-title">Selected work</h2>
-        </div>
-        <p class="prose prose-lead reveal">
-          Four projects I&rsquo;ll design this semester, one for each upcoming assignment.
-          The service-site prototype and memory-game prototype are now available, and the remaining projects are on the way.
+        <p class="prose reveal">
+          I am interested in AI, software systems, entrepreneurship, and
+          visual presentation. For me, strong interface design is not
+          decoration; it is communication. A good screen should help users
+          know where they are, what matters most, and what action to take
+          next.
         </p>
 
-        <div class="row g-4 mt-1">
-          <!-- Design 1: service site -->
-          <div class="col-md-6 col-lg-3">
-            <a class="work-card reveal" href="https://seg3125-assignment2-service-site.netlify.app" target="_blank" rel="noopener">
-              <div class="work-thumb thumb-1">
-                <img src="assets/service-site.svg" alt="Preview illustration for a service booking website" />
-              </div>
-              <div class="work-body">
-                <div class="work-top">
-                  <span class="work-no mono">01</span>
-                  <span class="soon-badge"><i class="bi bi-check-circle" aria-hidden="true"></i> Assignment 2</span>
-                </div>
-                <h3 class="work-title">Service Booking Site</h3>
-                <p class="work-desc">A service interface focused on clear booking, trust, and low-friction navigation.</p>
-                <span class="work-cta">View case study <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </a>
-          </div>
+        <ul class="chips reveal" aria-label="A few things I like">
 
-          <!-- Design 2: memory game -->
-          <div class="col-md-6 col-lg-3">
-            <a class="work-card reveal" data-reveal-delay="1" href="https://seg3125-assignment3-memory-game.netlify.app/" target="_blank" rel="noopener">
-              <div class="work-thumb thumb-2">
-                <img src="assets/memory-game.svg" alt="Preview illustration for Arsany Smart memory game" />
-              </div>
-              <div class="work-body">
-                <div class="work-top">
-                  <span class="work-no mono">02</span>
-                  <span class="soon-badge"><i class="bi bi-check-circle" aria-hidden="true"></i> Assignment 3</span>
-                </div>
-                <h3 class="work-title">Arsany Smart</h3>
-                <p class="work-desc">A short-term visual memory game with levels, themes, feedback, and sequence recall.</p>
-                <span class="work-cta">View case study <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </a>
-          </div>
+          <li class="chip">
+            <i class="bi bi-code-slash" aria-hidden="true"></i>
+            Clean code
+          </li>
 
-          <!-- Design 3: e-commerce -->
-          <div class="col-md-6 col-lg-3">
-            <a class="work-card reveal" data-reveal-delay="2" href="coming-soon.html?design=ecommerce">
-              <div class="work-thumb thumb-3">
-                <img src="assets/ecommerce-site.svg" alt="Preview illustration for an e-commerce website" />
-              </div>
-              <div class="work-body">
-                <div class="work-top">
-                  <span class="work-no mono">03</span>
-                  <span class="soon-badge"><i class="bi bi-clock-history" aria-hidden="true"></i> Coming soon</span>
-                </div>
-                <h3 class="work-title">E-Commerce Store</h3>
-                <p class="work-desc">An e-commerce flow with hierarchy, product clarity, and a trustworthy checkout path.</p>
-                <span class="work-cta">View case study <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </a>
-          </div>
+          <li class="chip">
+            <i class="bi bi-cpu" aria-hidden="true"></i>
+            AI &amp; systems
+          </li>
 
-          <!-- Design 4: analytics -->
-          <div class="col-md-6 col-lg-3">
-            <a class="work-card reveal" data-reveal-delay="3" href="coming-soon.html?design=analytics">
-              <div class="work-thumb thumb-4">
-                <img src="assets/analytics-site.svg" alt="Preview illustration for an analytics dashboard" />
-              </div>
-              <div class="work-body">
-                <div class="work-top">
-                  <span class="work-no mono">04</span>
-                  <span class="soon-badge"><i class="bi bi-clock-history" aria-hidden="true"></i> Coming soon</span>
-                </div>
-                <h3 class="work-title">Analytics Dashboard</h3>
-                <p class="work-desc">A dashboard that uses charts, scale, and contrast to make data easy to compare.</p>
-                <span class="work-cta">View case study <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </a>
-          </div>
-        </div>
+          <li class="chip">
+            <i class="bi bi-pencil" aria-hidden="true"></i>
+            Visual design
+          </li>
+
+          <li class="chip">
+            <i
+              class="bi bi-lightning-charge"
+              aria-hidden="true"
+            ></i>
+            Entrepreneurship
+          </li>
+
+          <li class="chip">
+            <i class="bi bi-stars" aria-hidden="true"></i>
+            Style &amp; presentation
+          </li>
+
+        </ul>
+
       </div>
-    </section>
 
-    <!-- =====================  CONTACT  ===================== -->
-    <section id="contact" class="section section-contact">
-      <div class="container">
-        <div class="contact-box reveal">
-          <span class="tick tick-tl" aria-hidden="true"></span>
-          <span class="tick tick-br" aria-hidden="true"></span>
-          <p class="kicker">// 04 — say hello</p>
-          <h2 class="contact-title">Let&rsquo;s build something clear together.</h2>
-          <p class="contact-sub">
-            I&rsquo;m always glad to talk design, software, or an opportunity.
+      <div class="col-lg-5">
+
+        <aside class="fact-card reveal">
+
+          <h3 class="fact-title">At a glance</h3>
+
+          <dl class="fact-list">
+
+            <div>
+              <dt>
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                Studying
+              </dt>
+              <dd>B.A.Sc. Computer Engineering</dd>
+            </div>
+
+            <div>
+              <dt>
+                <i class="bi bi-compass" aria-hidden="true"></i>
+                Focus right now
+              </dt>
+              <dd>UI/UX and visual communication</dd>
+            </div>
+
+            <div>
+              <dt>
+                <i class="bi bi-tools" aria-hidden="true"></i>
+                Working with
+              </dt>
+              <dd>HTML · CSS · JavaScript · React · Bootstrap</dd>
+            </div>
+
+            <div>
+              <dt>
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+                Reach me
+              </dt>
+              <dd>
+                <a href="mailto:arsanydematry1@gmail.com">
+                  arsanydematry1@gmail.com
+                </a>
+              </dd>
+            </div>
+
+          </dl>
+
+        </aside>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== HOW I WORK ===================== -->
+<section id="process" class="section section-alt">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-no mono">02</span>
+      <h2 class="section-title">How I work</h2>
+    </div>
+
+    <p class="prose prose-lead reveal">
+      I am continuing to develop my design process through
+      <strong>
+        SEG3125 — Analysis and Design of User Interfaces
+      </strong>.
+      My approach is simple: understand the user and the task, study the
+      relevant design principles, apply them deliberately, and then test
+      whether the resulting interface actually makes the experience
+      easier.
+    </p>
+
+    <div class="row g-4 mt-1">
+
+      <div class="col-md-6 col-lg-3">
+        <div class="step-card reveal">
+
+          <span class="step-no mono">→</span>
+
+          <i
+            class="bi bi-search step-icon"
+            aria-hidden="true"
+          ></i>
+
+          <h3 class="step-title">Learn</h3>
+
+          <p>
+            Study the user, task, domain, and relevant principles from
+            trusted course and UX resources.
           </p>
-          <div class="contact-actions">
-            <a class="btn btn-accent" href="mailto:arsanydematry1@gmail.com">
-              <i class="bi bi-envelope" aria-hidden="true"></i> Email me
-            </a>
-            <a class="btn btn-ghost" href="https://github.com/Arsany75" target="_blank" rel="noopener">
-              <i class="bi bi-github" aria-hidden="true"></i> GitHub
-            </a>
-            <a class="btn btn-ghost" href="https://github.com/Arsany75/seg3125-portfolio" target="_blank" rel="noopener">
-              <i class="bi bi-folder2-open" aria-hidden="true"></i> Project repo
-            </a>
-          </div>
+
         </div>
       </div>
-    </section>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="step-card reveal" data-reveal-delay="1">
+
+          <span class="step-no mono">→</span>
+
+          <i
+            class="bi bi-pencil-square step-icon"
+            aria-hidden="true"
+          ></i>
+
+          <h3 class="step-title">Apply</h3>
+
+          <p>
+            Make deliberate choices and explain why each interaction,
+            layout, colour, and word supports the user.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="step-card reveal" data-reveal-delay="2">
+
+          <span class="step-no mono">→</span>
+
+          <i
+            class="bi bi-code-square step-icon"
+            aria-hidden="true"
+          ></i>
+
+          <h3 class="step-title">Build</h3>
+
+          <p>
+            Turn the design into a responsive and interactive interface
+            with HTML, CSS, JavaScript, React, and Bootstrap.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="step-card reveal" data-reveal-delay="3">
+
+          <span class="step-no mono">→</span>
+
+          <i
+            class="bi bi-arrow-repeat step-icon"
+            aria-hidden="true"
+          ></i>
+
+          <h3 class="step-title">Evaluate</h3>
+
+          <p>
+            Test the experience against user goals, course principles,
+            usability heuristics, and feedback, then refine it.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="learn-row reveal">
+
+      <h3 class="learn-title">
+        <i class="bi bi-bookmark-star" aria-hidden="true"></i>
+        What I am learning from
+      </h3>
+
+      <ul class="learn-links">
+
+        <li>
+          <a
+            href="https://www.nngroup.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            Nielsen Norman Group
+            <i
+              class="bi bi-box-arrow-up-right"
+              aria-hidden="true"
+            ></i>
+          </a>
+
+          <span>
+            UX research, usability heuristics, and visual-design
+            principles
+          </span>
+        </li>
+
+        <li>
+          <a
+            href="https://www.w3schools.com/bootstrap5/index.php"
+            target="_blank"
+            rel="noopener"
+          >
+            Bootstrap 5 &amp; W3Schools
+            <i
+              class="bi bi-box-arrow-up-right"
+              aria-hidden="true"
+            ></i>
+          </a>
+
+          <span>
+            HTML, CSS, JavaScript, and interface components
+          </span>
+        </li>
+
+        <li>
+          <a
+            href="https://catalogue.uottawa.ca/en/courses/seg/"
+            target="_blank"
+            rel="noopener"
+          >
+            SEG3125 @ uOttawa
+            <i
+              class="bi bi-box-arrow-up-right"
+              aria-hidden="true"
+            ></i>
+          </a>
+
+          <span>
+            Analysis and Design of User Interfaces
+          </span>
+        </li>
+
+      </ul>
+
+      <p class="learn-note mono">
+        // visual communication · user-centred design · cognition ·
+        system image · interactive processes · verbal communication ·
+        usability heuristics.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== WORK / CASE STUDIES ===================== -->
+<section id="work" class="section">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-no mono">03</span>
+      <h2 class="section-title">Selected work</h2>
+    </div>
+
+    <p class="prose prose-lead reveal">
+      Four projects developed throughout SEG3125. The service-site,
+      memory-game, and e-commerce prototypes are now available. The
+      analytics dashboard will be added later in the semester.
+    </p>
+
+    <div class="row g-4 mt-1">
+
+      <!-- ================= DESIGN 1: SERVICE SITE ================= -->
+      <div class="col-md-6 col-lg-3">
+
+        <a
+          class="work-card reveal"
+          href="https://seg3125-assignment2-service-site.netlify.app/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open the Clarity Dental Studio Assignment 2 website"
+        >
+
+          <div class="work-thumb thumb-1">
+            <img
+              src="assets/service-site.svg"
+              alt="Preview illustration for the Clarity Dental Studio service-booking website"
+            />
+          </div>
+
+          <div class="work-body">
+
+            <div class="work-top">
+
+              <span class="work-no mono">01</span>
+
+              <span class="soon-badge">
+                <i
+                  class="bi bi-check-circle"
+                  aria-hidden="true"
+                ></i>
+                Assignment 2
+              </span>
+
+            </div>
+
+            <h3 class="work-title">Clarity Dental Studio</h3>
+
+            <p class="work-desc">
+              A user-centred dental service interface focused on clear
+              treatment information, trust, and low-friction appointment
+              booking.
+            </p>
+
+            <span class="work-cta">
+              View case study
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+      <!-- ================= DESIGN 2: MEMORY GAME ================= -->
+      <div class="col-md-6 col-lg-3">
+
+        <a
+          class="work-card reveal"
+          data-reveal-delay="1"
+          href="https://seg3125-assignment3-memory-game.netlify.app/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open the Arsany Smart Assignment 3 memory game"
+        >
+
+          <div class="work-thumb thumb-2">
+            <img
+              src="assets/memory-game.svg"
+              alt="Preview illustration for the Arsany Smart memory game"
+            />
+          </div>
+
+          <div class="work-body">
+
+            <div class="work-top">
+
+              <span class="work-no mono">02</span>
+
+              <span class="soon-badge">
+                <i
+                  class="bi bi-check-circle"
+                  aria-hidden="true"
+                ></i>
+                Assignment 3
+              </span>
+
+            </div>
+
+            <h3 class="work-title">Arsany Smart</h3>
+
+            <p class="work-desc">
+              A short-term visual sequence-memory game with configurable
+              levels, themes, feedback, progress, and sequence recall.
+            </p>
+
+            <span class="work-cta">
+              View case study
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+      <!-- ================= DESIGN 3: E-COMMERCE ================= -->
+      <div class="col-md-6 col-lg-3">
+
+        <a
+          class="work-card reveal"
+          data-reveal-delay="2"
+          href="https://seg3125-assignment4-arsanio.netlify.app/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Open the ARSANIO Assignment 4 e-commerce website"
+        >
+
+          <div class="work-thumb thumb-3">
+            <img
+              src="assets/ecommerce-site.svg"
+              alt="Preview illustration for the ARSANIO premium menswear e-commerce website"
+            />
+          </div>
+
+          <div class="work-body">
+
+            <div class="work-top">
+
+              <span class="work-no mono">03</span>
+
+              <span class="soon-badge">
+                <i
+                  class="bi bi-check-circle"
+                  aria-hidden="true"
+                ></i>
+                Assignment 4
+              </span>
+
+            </div>
+
+            <h3 class="work-title">ARSANIO E-Commerce</h3>
+
+            <p class="work-desc">
+              A premium menswear store featuring functional faceted
+              search, product exploration, reviews, support, a guided
+              checkout, and customer feedback.
+            </p>
+
+            <span class="work-cta">
+              View case study
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+      <!-- ================= DESIGN 4: ANALYTICS ================= -->
+      <div class="col-md-6 col-lg-3">
+
+        <a
+          class="work-card reveal"
+          data-reveal-delay="3"
+          href="coming-soon.html?design=analytics"
+          aria-label="Open the coming-soon page for the analytics dashboard"
+        >
+
+          <div class="work-thumb thumb-4">
+            <img
+              src="assets/analytics-site.svg"
+              alt="Preview illustration for an analytics dashboard"
+            />
+          </div>
+
+          <div class="work-body">
+
+            <div class="work-top">
+
+              <span class="work-no mono">04</span>
+
+              <span class="soon-badge">
+                <i
+                  class="bi bi-clock-history"
+                  aria-hidden="true"
+                ></i>
+                Coming soon
+              </span>
+
+            </div>
+
+            <h3 class="work-title">Analytics Dashboard</h3>
+
+            <p class="work-desc">
+              A dashboard that will use charts, scale, hierarchy, and
+              contrast to make complex information easier to compare.
+            </p>
+
+            <span class="work-cta">
+              View project status
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section section-contact">
+  <div class="container">
+
+    <div class="contact-box reveal">
+
+      <span class="tick tick-tl" aria-hidden="true"></span>
+      <span class="tick tick-br" aria-hidden="true"></span>
+
+      <p class="kicker">// 04 — say hello</p>
+
+      <h2 class="contact-title">
+        Let&rsquo;s build something clear together.
+      </h2>
+
+      <p class="contact-sub">
+        I am always glad to talk about design, software, AI, or an
+        opportunity.
+      </p>
+
+      <div class="contact-actions">
+
+        <a
+          class="btn btn-accent"
+          href="mailto:arsanydematry1@gmail.com"
+        >
+          <i class="bi bi-envelope" aria-hidden="true"></i>
+          Email me
+        </a>
+
+        <a
+          class="btn btn-ghost"
+          href="https://github.com/Arsany75"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="bi bi-github" aria-hidden="true"></i>
+          GitHub
+        </a>
+
+        <a
+          class="btn btn-ghost"
+          href="https://github.com/Arsany75/seg3125-portfolio"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="bi bi-folder2-open" aria-hidden="true"></i>
+          Project repository
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+```
+
   </main>
 
-  <!-- =====================  FOOTER  ===================== -->
+  <!-- ===================== FOOTER ===================== -->
+
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span class="footer-brand">Arsany Dematry</span>
-      <span class="footer-meta mono">
-        SEG3125 · University of Ottawa · <span id="year"></span>
-      </span>
-      <span class="footer-built">Built with HTML, CSS, JavaScript &amp; Bootstrap&nbsp;5</span>
-    </div>
+
+```
+  <span class="footer-brand">
+    Arsany Dematry
+  </span>
+
+  <span class="footer-meta mono">
+    SEG3125 · University of Ottawa ·
+    <span id="year"></span>
+  </span>
+
+  <span class="footer-built">
+    Built with HTML, CSS, JavaScript &amp; Bootstrap&nbsp;5
+  </span>
+
+</div>
+```
+
   </footer>
 
-  <!-- Bootstrap 5 JS bundle (navbar collapse + scrollspy) -->
+  <!-- Bootstrap 5 JavaScript bundle -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript -->
+
   <script src="js/main.js"></script>
+
 </body>
 </html>
